@@ -13,7 +13,7 @@ interface EditorAreaProps {
 
 export const EditorArea: React.FC<EditorAreaProps> = ({ openFiles, activeFile, onTabClick, onTabClose }) => {
   return (
-    <div className="flex-1 flex flex-col bg-[var(--editor-bg)]">
+    <div className="flex-1 flex flex-col bg-[var(--editor-bg)] min-w-0">
       <EditorTabs
         openFiles={openFiles}
         activeFileId={activeFile?.id || ''}

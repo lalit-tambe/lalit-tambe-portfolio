@@ -30,7 +30,7 @@ export const EditorContent: React.FC<EditorContentProps> = ({ activeFile }) => {
 
   return (
     <div className="flex-1 overflow-auto p-4 font-editor text-sm leading-6">
-      <table className="w-full">
+      <table>
         <tbody>
           {lines.map((line, i) => (
             <tr key={i} className={activeFile.id === 'src/1_experience/experience.py' && i === 10 ? 'bg-[var(--active-line-bg)]' : ''}>
