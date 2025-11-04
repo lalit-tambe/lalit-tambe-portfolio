@@ -39,6 +39,25 @@
       .token.function { color: #DCDCAA; }
       .token.number { color: #B5CEA8; }
       .token.class-name { color: #4EC9B0; }
+
+      /* Custom Scrollbar Styling */
+      ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: #424242;
+        border-radius: 5px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: #555555;
+      }
+      ::-webkit-scrollbar-corner {
+        background: transparent;
+      }
     </style>
   <script type="importmap">
 {
@@ -49,7 +68,6 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
 </head>
   <body class="bg-[#1e1e1e]">
     <div id="root"></div>
