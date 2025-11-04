@@ -9,13 +9,14 @@ interface SidebarProps {
   onFileClick: (fileId: string) => void;
   expandedFolders: Set<string>;
   onFolderToggle: (folderId: string) => void;
+  style?: React.CSSProperties;
 }
 
-export const Sidebar: React.FC<SidebarProps> = ({ activeFileId, onFileClick, expandedFolders, onFolderToggle }) => {
+export const Sidebar: React.FC<SidebarProps> = ({ activeFileId, onFileClick, expandedFolders, onFolderToggle, style }) => {
   const [isExplorerOpen, setIsExplorerOpen] = useState(true);
 
   return (
-    <div className="bg-[#252526] w-64 flex flex-col text-sm">
+    <div className="bg-[#252526] flex flex-col text-sm flex-shrink-0" style={style}>
       <header className="flex justify-between items-center p-2.5 text-xs uppercase text-gray-400 tracking-wider">
         <span>Explorer</span>
         <button className="text-gray-400 hover:text-white">

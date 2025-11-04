@@ -1,11 +1,15 @@
-import React, { useState, useCallback, useMemo } from 'react';
+import React, { useState, useCallback, useMemo, useRef, useEffect } from 'react';
 import { ActivityBar } from './components/ActivityBar';
 import { Sidebar } from './components/Sidebar';
 import { EditorArea } from './components/EditorArea';
 import { StatusBar } from './components/StatusBar';
 import { TitleBar } from './components/TitleBar';
+import { Resizer } from './components/Resizer';
 import { FILE_TREE } from './constants';
 import { FileNode } from './types';
+
+const MIN_SIDEBAR_WIDTH = 200;
+const MAX_SIDEBAR_WIDTH = 500;
 
 const App: React.FC = () => {
   const [activeIcon, setActiveIcon] = useState<string>('files');
@@ -14,6 +18,47 @@ const App: React.FC = () => {
   const [expandedFolders, setExpandedFolders] = useState<Set<string>>(
     new Set(['src', 'src/1_experience', 'src/2_projects', 'src/3_skills'])
   );
+  
+  const [sidebarWidth, setSidebarWidth] = useState(256);
+  const resizeData = useRef({
+    isResizing: false,
+    startingWidth: 0,
+    startingCursorX: 0,
+  });
+
+  const handleMouseDown = useCallback((e: React.MouseEvent) => {
+      e.preventDefault();
+      resizeData.current = {
+        isResizing: true,
+        startingWidth: sidebarWidth,
+        startingCursorX: e.clientX,
+      };
+  }, [sidebarWidth]);
+
+  const handleMouseUp = useCallback(() => {
+      resizeData.current.isResizing = false;
+  }, []);
+
+  const handleMouseMove = useCallback((e: MouseEvent) => {
+      if (!resizeData.current.isResizing) {
+        return;
+      }
+      const deltaX = e.clientX - resizeData.current.startingCursorX;
+      const newWidth = resizeData.current.startingWidth + deltaX;
+
+      const clampedWidth = Math.max(MIN_SIDEBAR_WIDTH, Math.min(newWidth, MAX_SIDEBAR_WIDTH));
+      setSidebarWidth(clampedWidth);
+  }, []);
+
+  useEffect(() => {
+      window.addEventListener('mousemove', handleMouseMove);
+      window.addEventListener('mouseup', handleMouseUp);
+      return () => {
+        window.removeEventListener('mousemove', handleMouseMove);
+        window.removeEventListener('mouseup', handleMouseUp);
+      };
+  }, [handleMouseMove, handleMouseUp]);
+
 
   const fileMap = useMemo(() => {
     const map = new Map<string, FileNode>();
@@ -76,12 +121,16 @@ const App: React.FC = () => {
       <main className="flex flex-1 overflow-hidden">
         <ActivityBar activeIcon={activeIcon} onIconClick={setActiveIcon} />
         {activeIcon === 'files' && (
-          <Sidebar
-            activeFileId={activeFileId}
-            onFileClick={handleFileClick}
-            expandedFolders={expandedFolders}
-            onFolderToggle={handleFolderToggle}
-          />
+          <>
+            <Sidebar
+              style={{ width: `${sidebarWidth}px` }}
+              activeFileId={activeFileId}
+              onFileClick={handleFileClick}
+              expandedFolders={expandedFolders}
+              onFolderToggle={handleFolderToggle}
+            />
+            <Resizer onMouseDown={handleMouseDown} />
+          </>
         )}
         <EditorArea
           openFiles={openFiles}
