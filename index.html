@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lalit Tambe - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', 'Segoe UI', sans-serif;
+        --title-bar-bg: #3c3c3c;
+        --sidebar-bg: #252526;
+        --editor-bg: #1e1e1e;
+        --status-bar-bg: #2c2c2c;
+        --active-tab-bg: #1e1e1e;
+        --inactive-tab-bg: #2d2d2d;
+        --active-line-bg: rgba(58, 62, 73, 0.7);
+        --line-number-color: #858585;
+      }
+      .font-editor {
+        font-family: 'Fira Code', 'Consolas', monospace;
+      }
+      .font-sans {
+         font-family: 'Inter', 'Segoe UI', sans-serif;
+      }
+
+      /* Syntax Highlighting (Dark+ Theme) */
+      .token.comment { color: #6A9955; }
+      .token.keyword { color: #569CD6; }
+      .token.string { color: #CE9178; }
+      .token.variable { color: #9CDCFE; }
+      .token.operator { color: #d4d4d4; }
+      .token.punctuation { color: #d4d4d4; }
+      .token.property { color: #9CDCFE; }
+      .token.function { color: #DCDCAA; }
+      .token.number { color: #B5CEA8; }
+      .token.class-name { color: #4EC9B0; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-[#1e1e1e]">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+{
+  "name": "VS Code Portfolio",
+  "description": "An interactive portfolio website that simulates the VS Code editor UI, showcasing a developer's experience, projects, and skills.",
+  "requestFramePermissions": []
+}
