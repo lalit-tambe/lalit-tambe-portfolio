@@ -116,7 +116,7 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex flex-col h-screen w-screen text-gray-300 overflow-hidden font-sans">
+    <div className="flex flex-col h-screen w-screen text-gray-300 overflow-hidden">
       <TitleBar />
       <main className="flex flex-1 overflow-hidden">
         <ActivityBar activeIcon={activeIcon} onIconClick={setActiveIcon} />

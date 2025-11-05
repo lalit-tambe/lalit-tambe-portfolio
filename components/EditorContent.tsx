@@ -20,7 +20,7 @@ export const EditorContent: React.FC<EditorContentProps> = ({ activeFile }) => {
   if (activeFile.language === 'html' && activeFile.id === 'contact.html') {
     return (
       <div
-        className="flex-1 p-4 overflow-auto font-sans"
+        className="flex-1 p-4 overflow-auto"
         dangerouslySetInnerHTML={{ __html: content }}
       />
     );
@@ -29,7 +29,7 @@ export const EditorContent: React.FC<EditorContentProps> = ({ activeFile }) => {
   if (activeFile.id === 'README.md') {
     return (
       <div
-        className="flex-1 p-8 overflow-auto font-sans text-gray-300 leading-relaxed markdown-body max-w-4xl mx-auto"
+        className="flex-1 p-8 overflow-auto text-gray-300 leading-relaxed markdown-body max-w-4xl mx-auto"
         dangerouslySetInnerHTML={{ __html: content }}
       />
     );
@@ -38,7 +38,7 @@ export const EditorContent: React.FC<EditorContentProps> = ({ activeFile }) => {
   const lines = content.split('\n');
 
   return (
-    <div className="flex-1 overflow-auto p-4 font-editor text-sm leading-6">
+    <div className="flex-1 overflow-auto p-4 editor-font text-sm leading-6">
       <table>
         <tbody>
           {lines.map((line, i) => (
