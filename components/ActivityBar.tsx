@@ -16,12 +16,14 @@ const IconButton: React.FC<{
   return (
     <button
       onClick={() => onClick(id)}
-      className="relative w-full flex justify-center items-center py-3 text-gray-400 hover:text-white"
+      className={`relative w-full flex justify-center items-center py-3 text-gray-400 hover:text-white ${
+        isActive ? 'text-white' : 'text-gray-400'
+      }`}
       aria-label={label}
       title={label}
     >
       {isActive && <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-[#007acc]"></div>}
-      <i className={`codicon ${icon} text-2xl`}></i>
+      <i className={`codicon ${icon} activity-bar-icon`}></i>
     </button>
   );
 };
