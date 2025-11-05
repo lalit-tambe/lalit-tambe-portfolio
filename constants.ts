@@ -45,7 +45,7 @@ export const FILE_CONTENT: Record<string, string> = {
 
 ## Lalit Tambe - Full Stack Engineer
 
-<p>Hi, I'm Lalit. I'm a Full Stack Engineer based in Nashik, India, with a passion for architecting robust, scalable, and secure web applications.</p>
+<p>Hi, I'm Lalit. I'm a Full Stack Engineer with a passion for architecting robust, scalable, and secure web applications.</p>
 
 <p>With 5+ years of experience in the full software lifecycle, I specialize in backend development with Laravel and building dynamic, data-driven frontends with ReactJs and Livewire.</p>
 

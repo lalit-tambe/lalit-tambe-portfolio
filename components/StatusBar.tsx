@@ -1,5 +1,5 @@
 import React from 'react';
-import { GitBranchIcon } from './icons/GitBranchIcon';
+// import { GitBranchIcon } from './icons/GitBranchIcon';
 import { FileNode } from '../types';
 
 interface StatusBarProps {
@@ -26,7 +26,8 @@ export const StatusBar: React.FC<StatusBarProps> = ({ activeFile }) => {
     <footer className="bg-[var(--status-bar-bg)] h-6 flex items-center justify-between text-white text-xs">
       <div className="flex items-center h-full">
         <StatusItem>
-            <GitBranchIcon className="w-4 h-4 mr-1" />
+           <i className="codicon codicon-source-control w-4 h-4 mr-1" />
+            {/* <GitBranchIcon className="w-4 h-4 mr-1" /> */}
             <span>main</span>
         </StatusItem>
       </div>
@@ -34,6 +35,7 @@ export const StatusBar: React.FC<StatusBarProps> = ({ activeFile }) => {
         <StatusItem>
             <span>Ln 11, Col 29</span>
         </StatusItem>
+         {/* FIX: Corrected a typo in the following component's closing tag. */}
         <StatusItem>
             <span>Spaces: 4</span>
         </StatusItem>

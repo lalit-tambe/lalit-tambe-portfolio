@@ -1,8 +1,8 @@
 import React from 'react';
 import { FileNode } from '../types';
-import { ChevronDownIcon, ChevronRightIcon } from './icons/ChevronIcons';
-import { FolderIcon, FolderOpenIcon } from './icons/FolderIcons';
-import { FileIcon } from './icons/FileIcon';
+// import { ChevronDownIcon, ChevronRightIcon } from './icons/ChevronIcons';
+// import { FolderIcon, FolderOpenIcon } from './icons/FolderIcons';
+import { FileIcon } from './FileIcon';
 
 interface FileTreeProps {
   nodes: FileNode[];
@@ -26,8 +26,10 @@ export const FileTree: React.FC<FileTreeProps> = ({ nodes, level = 0, activeFile
                 style={{ paddingLeft: `${level * 16 + 8}px` }}
                 onClick={() => onFolderToggle(node.id)}
               >
-                {isExpanded ? <ChevronDownIcon className="w-4 h-4 mr-1" /> : <ChevronRightIcon className="w-4 h-4 mr-1" />}
-                {isExpanded ? <FolderOpenIcon className="w-5 h-5 mr-2 text-blue-400" /> : <FolderIcon className="w-5 h-5 mr-2 text-blue-400" />}
+                 <i className={`codicon ${isExpanded ? 'codicon-chevron-down' : 'codicon-chevron-right'} w-4 h-4 mr-1`} />
+                <i className={`codicon ${isExpanded ? 'codicon-folder-opened' : 'codicon-folder'} w-5 h-5 mr-2 text-blue-400`} />
+                {/* {isExpanded ? <ChevronDownIcon className="w-4 h-4 mr-1" /> : <ChevronRightIcon className="w-4 h-4 mr-1" />}
+                {isExpanded ? <FolderOpenIcon className="w-5 h-5 mr-2 text-blue-400" /> : <FolderIcon className="w-5 h-5 mr-2 text-blue-400" />} */}
                 <span>{node.name}</span>
               </div>
               {isExpanded && node.children && (

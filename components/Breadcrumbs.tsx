@@ -1,6 +1,6 @@
 import React from 'react';
 import { FileNode } from '../types';
-import { ChevronRightSmallIcon } from './icons/ChevronRightSmallIcon';
+// import { ChevronRightSmallIcon } from './icons/ChevronRightSmallIcon';
 
 interface BreadcrumbsProps {
   activeFile?: FileNode;
@@ -21,7 +21,8 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ activeFile }) => {
             {segment}
           </span>
           {index < pathSegments.length - 1 && (
-            <ChevronRightSmallIcon className="w-4 h-4 text-gray-500 mx-1" />
+            <i className="codicon codicon-chevron-right w-4 h-4 text-gray-500 mx-1" />
+            // <ChevronRightSmallIcon className="w-4 h-4 text-gray-500 mx-1" />
           )}
         </React.Fragment>
       ))}

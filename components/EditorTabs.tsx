@@ -1,7 +1,7 @@
 import React from 'react';
 import { FileNode } from '../types';
 import { FileIcon } from './icons/FileIcon';
-import { CloseIcon } from './icons/CloseIcon';
+// import { CloseIcon } from './icons/CloseIcon';
 
 interface EditorTabsProps {
   openFiles: FileNode[];
@@ -10,7 +10,7 @@ interface EditorTabsProps {
   onTabClose: (fileId: string) => void;
 }
 
-export const EditorTabs: React.FC<EditorTabsProps> = ({ openFiles, activeFileId, onTabClick, onTabClose }) => {
+export const EditorTabs: React.FC<EditorTabsProps> = ({ openFiles, activeFileId, onTabClose, onTabClick }) => {
   const handleCloseClick = (e: React.MouseEvent, fileId: string) => {
     e.stopPropagation();
     onTabClose(fileId);
@@ -38,7 +38,8 @@ export const EditorTabs: React.FC<EditorTabsProps> = ({ openFiles, activeFileId,
               onClick={(e) => handleCloseClick(e, file.id)}
               className="ml-4 p-1 rounded opacity-70 hover:opacity-100 hover:bg-white/20"
             >
-              <CloseIcon className="w-3 h-3" />
+              <i className="codicon codicon-close w-3 h-3" />
+              {/* <CloseIcon className="w-3 h-3" /> */}
             </button>
           </div>
         );

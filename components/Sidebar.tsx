@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { FILE_TREE } from '../constants';
 import { FileTree } from './FileTree';
-import { ChevronDownIcon } from './icons/ChevronIcons';
-import { EllipsisIcon } from './icons/EllipsisIcon';
+// import { ChevronDownIcon } from './icons/ChevronIcons';
+// import { EllipsisIcon } from './icons/EllipsisIcon';
 
 interface SidebarProps {
   activeFileId: string;
@@ -20,7 +20,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeFileId, onFileClick, exp
       <header className="flex justify-between items-center p-2.5 text-xs uppercase text-gray-400 tracking-wider">
         <span>Explorer</span>
         <button className="text-gray-400 hover:text-white">
-            <EllipsisIcon className="w-5 h-5"/>
+            {/* <EllipsisIcon className="w-5 h-5"/> */}
+            <i className="codicon codicon-ellipsis"></i>
         </button>
       </header>
       <div className="flex-1 overflow-y-auto">
@@ -28,7 +29,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeFileId, onFileClick, exp
           className="flex items-center p-1 cursor-pointer font-bold"
           onClick={() => setIsExplorerOpen(!isExplorerOpen)}
         >
-          <ChevronDownIcon className={`w-4 h-4 mr-1 transition-transform ${!isExplorerOpen ? '-rotate-90' : ''}`} />
+          <i className={`codicon codicon-chevron-down w-4 h-4 mr-1 transition-transform ${!isExplorerOpen ? '-rotate-90' : ''}`} />
+          {/* <ChevronDownIcon className={`w-4 h-4 mr-1 transition-transform ${!isExplorerOpen ? '-rotate-90' : ''}`} /> */}
           <span className="uppercase">LALIT-TAMBE-PORTFOLIO</span>
         </div>
         {isExplorerOpen && (

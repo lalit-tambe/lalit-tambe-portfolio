@@ -1,11 +1,4 @@
 import React from 'react';
-import { FilesIcon } from './icons/FilesIcon';
-import { SearchIcon } from './icons/SearchIcon';
-import { SourceControlIcon } from './icons/SourceControlIcon';
-import { DebugIcon } from './icons/DebugIcon';
-import { ExtensionsIcon } from './icons/ExtensionsIcon';
-import { AccountIcon } from './icons/AccountIcon';
-import { SettingsIcon } from './icons/SettingsIcon';
 
 interface ActivityBarProps {
   activeIcon: string;
@@ -16,9 +9,9 @@ const IconButton: React.FC<{
   id: string;
   activeId: string;
   onClick: (id: string) => void;
-  children: React.ReactNode;
+  icon: string;
   label: string;
-}> = ({ id, activeId, onClick, children, label }) => {
+}> = ({ id, activeId, onClick, icon, label }) => {
   const isActive = id === activeId;
   return (
     <button
@@ -28,7 +21,7 @@ const IconButton: React.FC<{
       title={label}
     >
       {isActive && <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-[#007acc]"></div>}
-      {children}
+      <i className={`codicon ${icon} text-2xl`}></i>
     </button>
   );
 };
@@ -38,7 +31,7 @@ export const ActivityBar: React.FC<ActivityBarProps> = ({ activeIcon, onIconClic
   return (
     <div className="bg-[#333333] w-12 flex flex-col justify-between items-center py-2">
       <div className="w-full">
-        <IconButton id="files" activeId={activeIcon} onClick={onIconClick} label="Explorer">
+        {/* <IconButton id="files" activeId={activeIcon} onClick={onIconClick} label="Explorer">
           <FilesIcon className="w-7 h-7" />
         </IconButton>
         <IconButton id="search" activeId={activeIcon} onClick={onIconClick} label="Search">
@@ -52,15 +45,22 @@ export const ActivityBar: React.FC<ActivityBarProps> = ({ activeIcon, onIconClic
         </IconButton>
         <IconButton id="extensions" activeId={activeIcon} onClick={onIconClick} label="Extensions">
           <ExtensionsIcon className="w-7 h-7" />
-        </IconButton>
+        </IconButton> */}
+        <IconButton id="files" activeId={activeIcon} onClick={onIconClick} label="Explorer" icon="codicon-files" />
+        <IconButton id="search" activeId={activeIcon} onClick={onIconClick} label="Search" icon="codicon-search" />
+        <IconButton id="source-control" activeId={activeIcon} onClick={onIconClick} label="Source Control" icon="codicon-source-control" />
+        <IconButton id="debug" activeId={activeIcon} onClick={onIconClick} label="Run and Debug" icon="codicon-debug-alt" />
+        <IconButton id="extensions" activeId={activeIcon} onClick={onIconClick} label="Extensions" icon="codicon-extensions" />
       </div>
       <div className="w-full">
-        <IconButton id="account" activeId={activeIcon} onClick={onIconClick} label="Accounts">
+        <IconButton id="account" activeId={activeIcon} onClick={onIconClick} label="Accounts" icon="codicon-account" />
+        <IconButton id="settings" activeId={activeIcon} onClick={onIconClick} label="Manage" icon="codicon-settings-gear" />
+        {/* <IconButton id="account" activeId={activeIcon} onClick={onIconClick} label="Accounts">
           <AccountIcon className="w-7 h-7" />
         </IconButton>
         <IconButton id="settings" activeId={activeIcon} onClick={onIconClick} label="Manage">
           <SettingsIcon className="w-7 h-7" />
-        </IconButton>
+        </IconButton> */}
       </div>
     </div>
   );
