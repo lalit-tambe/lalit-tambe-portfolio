@@ -1,4 +1,5 @@
 import { FileNode } from './types';
+import { PROFILE_PICTURE_B64 } from './assets';
 
 export const FILE_TREE: FileNode[] = [
   {
@@ -40,15 +41,17 @@ export const FILE_TREE: FileNode[] = [
 ];
 
 export const FILE_CONTENT: Record<string, string> = {
-  'README.md': `## Lalit Tambe - Full Stack Engineer
+  'README.md': `<img src="${PROFILE_PICTURE_B64}" alt="Lalit Tambe" style="float: right; width: 256px; height: 256px; margin: 0.5rem 0 1rem 2rem;">
 
-Hi, I'm Lalit. I'm a Full Stack Engineer based in Nashik, India, with a passion for architecting robust, scalable, and secure web applications.
+## Lalit Tambe - Full Stack Engineer
 
-With 5+ years of experience in the full software lifecycle, I specialize in backend development with Laravel and building dynamic, data-driven frontends with ReactJs and Livewire.
+<p>Hi, I'm Lalit. I'm a Full Stack Engineer based in Nashik, India, with a passion for architecting robust, scalable, and secure web applications.</p>
 
-My professional work focuses on building multi-tenant SaaS platforms, complex ETL pipelines, and real-time monitoring dashboards.
+<p>With 5+ years of experience in the full software lifecycle, I specialize in backend development with Laravel and building dynamic, data-driven frontends with ReactJs and Livewire.</p>
 
-This portfolio is a simulation of the VS Code editor. Click the files on the left to learn more about me.`,
+<p>My professional work focuses on building multi-tenant SaaS platforms, complex ETL pipelines, and real-time monitoring dashboards.</p>
+
+<p>This portfolio is a simulation of the VS Code editor. Click the files on the left to learn more about me.</p>`,
   'package.json': `{
   <span class="token property">"name"</span>: <span class="token string">"lalit-tambe-portfolio"</span>,
   <span class="token property">"version"</span>: <span class="token string">"1.0.0"</span>,
