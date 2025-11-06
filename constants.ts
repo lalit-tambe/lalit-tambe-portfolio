@@ -48,9 +48,9 @@ export const FILE_CONTENT: Record<string, string> = {
 <div class="readme-main-content">
   <div class="welcome-banner-wrapper">
     <div class="welcome-banner">
-        <p>I am a results-driven Full Stack Engineer with 5+ years of experience delivering high-impact, scalable web applications. My passion lies in solving complex problems and translating business requirements into clean, efficient, and secure code.</p>
+        <p>Hi :), I am a results-driven Full Stack Engineer with 5+ years of experience delivering high-impact, scalable solutions. My passion lies in solving complex problems and translating business requirements into clean, efficient, and secure code.</p>
 
-        <p>I specialize in building robust backends with <span class="tech-badge">Laravel</span> and crafting dynamic, responsive frontends using <span class="tech-badge">React.js</span> and <span class="tech-badge">Livewire</span>. My core expertise includes architecting multi-tenant <span class="tech-badge">SaaS</span> platforms, engineering complex <span class="tech-badge">ETL</span> pipelines, and developing real-time monitoring dashboards that have significantly improved data processing times and system reliability.</p>
+        <p>I specialize in building robust backends with <span class="tech-badge">Laravel</span> <span class="tech-badge">DJango</span> <span class="tech-badge">NodeJS</span> and crafting dynamic, responsive frontends using <span class="tech-badge">React.js</span> and <span class="tech-badge">Livewire</span>. My core expertise includes architecting multi-tenant <span class="tech-badge">SaaS</span> platforms, engineering complex <span class="tech-badge">ETL</span> pipelines, and developing real-time monitoring dashboards that have significantly improved data processing times and system reliability.</p>
     </div>
   </div>
   <div class="profile-picture-wrapper">
