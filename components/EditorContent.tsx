@@ -28,10 +28,12 @@ export const EditorContent: React.FC<EditorContentProps> = ({ activeFile }) => {
 
   if (activeFile.id === 'README.md') {
     return (
-      <div
-        className="flex-1 p-8 overflow-auto text-gray-300 leading-relaxed markdown-body max-w-4xl mx-auto"
-        dangerouslySetInnerHTML={{ __html: content }}
-      />
+      <div className="flex-1 overflow-auto">
+        <div
+          className="p-8 overflow-auto text-gray-300 leading-relaxed markdown-body mx-auto"
+          dangerouslySetInnerHTML={{ __html: content }}
+        />
+      </div>
     );
   }
 

@@ -41,17 +41,25 @@ export const FILE_TREE: FileNode[] = [
 ];
 
 export const FILE_CONTENT: Record<string, string> = {
-  'README.md': `<img src="${PROFILE_PICTURE_B64}" alt="Lalit Tambe" style="float: right; width: 256px; height: 256px; margin: 0.5rem 0 1rem 2rem;">
+   'README.md': `<div class="readme-content-wrapper">
+   <h2>Lalit Tambe</h2>
+<span class="subtitle">Full Stack Engineer & Problem Solver</span>
 
-## Lalit Tambe - Full Stack Engineer
+<div class="readme-main-content">
+  <div class="welcome-banner-wrapper">
+    <div class="welcome-banner">
+        <p>I am a results-driven Full Stack Engineer with 5+ years of experience delivering high-impact, scalable web applications. My passion lies in solving complex problems and translating business requirements into clean, efficient, and secure code.</p>
 
-<p>Hi, I'm Lalit. I'm a Full Stack Engineer with a passion for architecting robust, scalable, and secure web applications.</p>
+        <p>I specialize in building robust backends with <span class="tech-badge">Laravel</span> and crafting dynamic, responsive frontends using <span class="tech-badge">React.js</span> and <span class="tech-badge">Livewire</span>. My core expertise includes architecting multi-tenant <span class="tech-badge">SaaS</span> platforms, engineering complex <span class="tech-badge">ETL</span> pipelines, and developing real-time monitoring dashboards that have significantly improved data processing times and system reliability.</p>
+    </div>
+  </div>
+  <div class="profile-picture-wrapper">
+    <img src="${PROFILE_PICTURE_B64}" alt="Lalit Tambe" class="profile-picture">
+  </div>
+</div>
+</div>
 
-<p>With 5+ years of experience in the full software lifecycle, I specialize in backend development with Laravel and building dynamic, data-driven frontends with ReactJs and Livewire.</p>
-
-<p>My professional work focuses on building multi-tenant SaaS platforms, complex ETL pipelines, and real-time monitoring dashboards.</p>
-
-<p>This portfolio is a simulation of the VS Code editor. Click the files on the left to learn more about me.</p>`,
+<p class="call-to-action">This portfolio is an interactive simulation of the VS Code editor. Feel free to explore the files in the side panel to see my work, skills, and experience in more detail.</p>`,
   'package.json': `{
   <span class="token property">"name"</span>: <span class="token string">"lalit-tambe-portfolio"</span>,
   <span class="token property">"version"</span>: <span class="token string">"1.0.0"</span>,
