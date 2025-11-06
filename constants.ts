@@ -129,6 +129,7 @@ export const FILE_CONTENT: Record<string, string> = {
   'src/projects/mongo-aggregate.ts': `<span class="token comment">/*
  * NPM Package: mongo-aggregate
  * A fluent, chainable MongoDB aggregation builder.
+ * <a href="https://www.npmjs.com/package/mongo-aggregate" target="_blank" style="color: #3794ff; text-decoration: underline;">View on NPM</a>
  */</span>
 <span class="token keyword">import</span> { <span class="token class-name">Aggregator</span> } <span class="token keyword">from</span> <span class="token string">'mongo-aggregate'</span>;
 

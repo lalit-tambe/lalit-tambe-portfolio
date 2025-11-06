@@ -1,6 +1,6 @@
 import React from 'react';
 import { FileNode } from '../types';
-import { FileIcon } from './icons/FileIcon';
+import { FileIcon } from './FileIcon';
 // import { CloseIcon } from './icons/CloseIcon';
 
 interface EditorTabsProps {
