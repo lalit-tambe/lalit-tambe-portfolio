@@ -16,7 +16,11 @@ export const TitleBar: React.FC = () => {
     <header className="bg-[var(--title-bar-bg)] h-8 flex items-center justify-between text-gray-300 select-none">
       <div className="flex items-center h-full">
         <div className="flex items-center justify-center w-12">
-            <VscodeIcon className="w-5 h-5" />
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+              alt="VS Code Icon"
+              className="w-[22px] h-[22px]"
+            />
         </div>
         <div className="flex items-center space-x-1">
           <MenuItem>File</MenuItem>
