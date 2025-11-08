@@ -13,7 +13,7 @@ const MAX_SIDEBAR_WIDTH = 500;
 
 const App: React.FC = () => {
   const [activeIcon, setActiveIcon] = useState<string>('files');
-  const [openFileIds, setOpenFileIds] = useState<string[]>(['README.md']);
+  const [openFileIds, setOpenFileIds] = useState<string[]>(['README.md', 'contact.html']);
   const [activeFileId, setActiveFileId] = useState<string>('README.md');
   const [expandedFolders, setExpandedFolders] = useState<Set<string>>(
     new Set(['src', 'src/1_experience', 'src/2_projects', 'src/3_skills'])

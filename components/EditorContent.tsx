@@ -26,7 +26,7 @@ export const EditorContent: React.FC<EditorContentProps> = ({ activeFile }) => {
     );
   }
 
-  if (activeFile.id === 'README.md') {
+  if (activeFile.id === 'README.md' || activeFile.id === 'contact.html') {
     return (
       <div className="flex-1 overflow-auto">
         <div

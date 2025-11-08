@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@400;500;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vscode/codicons@0.0.35/dist/codicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
       body {
         font-family: 'Inter', 'Segoe UI', sans-serif;
@@ -148,6 +149,110 @@
         /* height: 160px; */
         border-radius: 50%;
         object-fit: cover;
+      }
+
+      /* Contact Page Styles */
+      .contact-container {
+        padding: 2rem;
+        color: #ccc;
+        max-width: 800px;
+        margin: auto;
+        animation: fadeIn 0.5s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .contact-container h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #569CD6;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid #444;
+        padding-bottom: 0.5rem;
+        text-align: center;
+      }
+      .contact-intro {
+        text-align: center;
+        font-size: 1.1rem;
+        color: #d4d4d4;
+        margin-bottom: 3rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .contact-list {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .contact-list li {
+        display: flex;
+        align-items: center;
+        font-size: 1.1rem;
+        background-color: var(--sidebar-bg);
+        border-radius: 6px;
+        border: 1px solid #3c3c3c;
+        transition: all 0.2s ease-in-out;
+        overflow: hidden;
+      }
+
+      .contact-list li > i {
+        font-size: 28px;
+        color: #9CDCFE;
+        width: 60px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.1);
+        border-right: 1px solid #3c3c3c;
+        margin-right: 1rem;
+      }
+
+      .contact-list li:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        border-color: #007acc;
+      }
+      .contact-list .codicon {
+        font-size: 24px;
+        color: #9CDCFE;
+        width: 60px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.1);
+        border-right: 1px solid #3c3c3c;
+        margin-right: 1rem;
+      }
+      .contact-list a {
+        color: #CE9178;
+        text-decoration: none;
+        padding: 1rem 0;
+        display: block;
+        width: 100%;
+        position: relative;
+      }
+      .contact-list a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 1px;
+        bottom: 0.75rem;
+        left: 0;
+        background-color: #dcb3a4;
+        transition: width 0.3s ease;
+      }
+      .contact-list li:hover a::after {
+        width: 100%;
+      }
+      .contact-list a:hover {
+        color: #CE9178;
+        border-bottom-color: transparent;
       }
 
       /* Custom Scrollbar Styling */

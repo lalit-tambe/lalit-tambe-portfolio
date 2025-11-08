@@ -86,27 +86,23 @@ export const FILE_CONTENT: Record<string, string> = {
     <span class="token property">"junit"</span>: <span class="token string">"latest"</span>
   }
 }`,
-  'contact.html': `<div class="p-4 text-gray-300">
-  <style>
-    .contact-card h2 { font-size: 1.5rem; font-weight: bold; color: #007acc; margin-bottom: 1rem; }
-    .contact-card p { margin-bottom: 1.5rem; }
-    .contact-card ul { list-style: none; padding: 0; margin-bottom: 2rem; }
-    .contact-card li { margin-bottom: 0.75rem; }
-    .contact-card a { color: #3794ff; text-decoration: none; }
-    .contact-card a:hover { text-decoration: underline; }
-    .resume-button { background-color: #007acc; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; transition: background-color 0.2s; }
-    .resume-button:hover { background-color: #005a9e; }
-  </style>
-  <div class="contact-card">
-    <h2>Get in Touch</h2>
-    <p>I'm always open to discussing new projects or opportunities.</p>
-    <ul>
-      <li><strong>Email:</strong> <a href="mailto:lalittambe963@gmail.com">lalittambe963@gmail.com</a></li>
-      <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/" target="_blank">LinkedIn Profile</a></li>
-      <li><strong>GitHub:</strong> <a href="https://github.com/" target="_blank">GitHub Profile</a></li>
-    </ul>
-    <button class="resume-button">Download Resume</button>
-  </div>
+  'contact.html': `<div class="contact-container">
+  <h1>Get in Touch</h1>
+  <p class="contact-intro">I'm always excited to connect with new people. Whether you have a question, a project proposal, or just want to say hi, my inbox is always open. Here are the best ways to reach me:</p>
+  <ul class="contact-list">
+    <li>
+      <i class="fa-solid fa-envelope"></i>
+      <a href="mailto:lalittambe963@gmail.com" target="_blank" rel="noopener noreferrer">lalittambe963@gmail.com</a>
+    </li>
+    <li>
+      <i class="fa-brands fa-linkedin"></i>
+      <a href="https://www.linkedin.com/in/lalittambe/" target="_blank" rel="noopener noreferrer">linkedin.com/in/lalittambe</a>
+    </li>
+    <li>
+      <i class="fa-brands fa-github"></i>
+      <a href="https://github.com/lalit-tambe" target="_blank" rel="noopener noreferrer">github.com/lalit-tambe</a>
+    </li>
+  </ul>
 </div>`,
   'src/experience/experience.py': `<span class="token comment"># Full Stack Engineer @ Insnapsys</span>
 <span class="token comment"># May 2021 - Present | Nashik, MH, India</span>
