@@ -86,24 +86,6 @@ export const FILE_CONTENT: Record<string, string> = {
     <span class="token property">"junit"</span>: <span class="token string">"latest"</span>
   }
 }`,
-  'contact.html': `<div class="contact-container">
-  <h1>Get in Touch</h1>
-  <p class="contact-intro">I'm always excited to connect with new people. Whether you have a question, a project proposal, or just want to say hi, my inbox is always open. Here are the best ways to reach me:</p>
-  <ul class="contact-list">
-    <li>
-      <i class="fa-solid fa-envelope"></i>
-      <a href="mailto:lalittambe963@gmail.com" target="_blank" rel="noopener noreferrer">lalittambe963@gmail.com</a>
-    </li>
-    <li>
-      <i class="fa-brands fa-linkedin"></i>
-      <a href="https://www.linkedin.com/in/lalittambe/" target="_blank" rel="noopener noreferrer">linkedin.com/in/lalittambe</a>
-    </li>
-    <li>
-      <i class="fa-brands fa-github"></i>
-      <a href="https://github.com/lalit-tambe" target="_blank" rel="noopener noreferrer">github.com/lalit-tambe</a>
-    </li>
-  </ul>
-</div>`,
   'src/experience/experience.py': `<span class="token comment"># Full Stack Engineer @ Insnapsys</span>
 <span class="token comment"># May 2021 - Present | Nashik, MH, India</span>
 <span class="token variable">insnapsys_role</span> <span class="token operator">=</span> {

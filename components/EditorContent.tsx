@@ -1,6 +1,7 @@
 import React from 'react';
 import { FileNode } from '../types';
 import { FILE_CONTENT } from '../constants';
+import { ContactPage } from './ContactPage';
 
 interface EditorContentProps {
   activeFile?: FileNode;
@@ -15,18 +16,14 @@ export const EditorContent: React.FC<EditorContentProps> = ({ activeFile }) => {
     );
   }
 
-  const content = FILE_CONTENT[activeFile.id] || 'File content not found.';
-  
-  if (activeFile.language === 'html' && activeFile.id === 'contact.html') {
-    return (
-      <div
-        className="flex-1 p-4 overflow-auto"
-        dangerouslySetInnerHTML={{ __html: content }}
-      />
-    );
+  if (activeFile.id === 'contact.html') {
+    return <ContactPage />;
   }
 
-  if (activeFile.id === 'README.md' || activeFile.id === 'contact.html') {
+  const content = FILE_CONTENT[activeFile.id] || 'File content not found.';
+
+
+  if (activeFile.id === 'README.md') {
     return (
       <div className="flex-1 overflow-auto">
         <div
