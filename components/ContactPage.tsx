@@ -53,11 +53,11 @@ export const ContactPage: React.FC = () => {
                     </li>
                     <li>
                     <i className="fa-brands fa-linkedin"></i>
-                    <a href="https://www.linkedin.com/in/lalit-tambe/" target="_blank" rel="noopener noreferrer">linkedin.com/in/lalit-tambe</a>
+                    <a href="https://www.linkedin.com/in/lalittambe/" target="_blank" rel="noopener noreferrer">linkedin.com/in/lalittambe</a>
                     </li>
                     <li>
                     <i className="fa-brands fa-github"></i>
-                    <a href="https://github.com/Lalit-T" target="_blank" rel="noopener noreferrer">github.com/Lalit-T</a>
+                    <a href="https://github.com/lalit-tambe" target="_blank" rel="noopener noreferrer">github.com/lalit-tambe</a>
                     </li>
                 </ul>
             </div>
