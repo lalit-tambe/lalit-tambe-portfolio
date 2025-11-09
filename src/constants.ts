@@ -43,14 +43,16 @@ export const FILE_TREE: FileNode[] = [
 export const FILE_CONTENT: Record<string, string> = {
    'README.md': `<div class="readme-content-wrapper">
    <h2>Lalit Tambe</h2>
-<span class="subtitle">Full Stack Engineer & Problem Solver</span>
+<span class="subtitle">Full Stack Engineer Architecting Scalable SaaS & Data-Intensive Applications</span>
 
 <div class="readme-main-content">
   <div class="welcome-banner-wrapper">
     <div class="welcome-banner">
-        <p>Hi :), I am a results-driven Full Stack Engineer with 5+ years of experience delivering high-impact, scalable solutions. My passion lies in solving complex problems and translating business requirements into clean, efficient, and secure code.</p>
+        <p>Hi, I'm a results-driven Full Stack Engineer with 5+ years of experience specializing in architecting high-impact, scalable solutions. My passion lies in translating complex business requirements into clean, efficient, and secure code.</p>
 
-        <p>I specialize in building robust backends with <span class="tech-badge">Laravel</span> <span class="tech-badge">DJango</span> <span class="tech-badge">NodeJS</span> and crafting dynamic, responsive frontends using <span class="tech-badge">React.js</span> and <span class="tech-badge">Livewire</span>. My core expertise includes architecting multi-tenant <span class="tech-badge">SaaS</span> platforms, engineering complex <span class="tech-badge">ETL</span> pipelines, and developing real-time monitoring dashboards that have significantly improved data processing times and system reliability.</p>
+        <p>I'm fluent across the stack, building robust backends with <span class="tech-badge">Laravel</span>, <span class="tech-badge">Django</span>, and <span class="tech-badge">NodeJS</span>, and crafting dynamic frontends with <span class="tech-badge">React.js</span> and <span class="tech-badge">TypeScript</span>. My core expertise is in tackling data-intensive challenges.</p>
+
+        <p>My key achievements include architecting a multi-tenant <span class="tech-badge">SaaS</span> data-sync engine (achieving <span class="tech-badge">100% data isolation</span>) and engineering a complex <span class="tech-badge">ETL pipeline</span> that cut data processing time by <span class="tech-badge">60%</span>. I also developed a real-time monitoring dashboard that reduced the Mean Time to Acknowledgment (MTTA) for critical alerts by <span class="tech-badge">50%</span>.</p>
     </div>
   </div>
   <div class="profile-picture-wrapper">
@@ -59,7 +61,7 @@ export const FILE_CONTENT: Record<string, string> = {
 </div>
 </div>
 
-<p class="call-to-action">This portfolio is an interactive simulation of the VS Code editor. Feel free to explore the files in the side panel to see my work, skills, and experience in more detail.</p>`,
+<p class="call-to-action">This portfolio is an interactive simulation of the VS Code editor. Feel free to explore the files in the side panel to see my work, skills, and experience in more detail. When you're ready to connect, just open the <strong>contact.html</strong> file.</p>`,
   'package.json': `{
   <span class="token property">"name"</span>: <span class="token string">"lalit-tambe-portfolio"</span>,
   <span class="token property">"version"</span>: <span class="token string">"1.0.0"</span>,
