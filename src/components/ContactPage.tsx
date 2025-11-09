@@ -33,7 +33,7 @@ export const ContactPage: React.FC = () => {
   };
 
   return (
-    <div className="contact-page-container flex-1 overflow-auto">
+    <div className="contact-page-container">
       <div className="contact-page-left">
         <h1>Let's Connect</h1>
         <p className="contact-intro">

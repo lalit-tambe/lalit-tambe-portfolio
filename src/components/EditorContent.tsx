@@ -1,7 +1,7 @@
-import React from 'react';
-import { FileNode } from '../types';
-import { FILE_CONTENT } from '../constants';
-import { ContactPage } from './ContactPage';
+import React from "react";
+import { FileNode } from "../types";
+import { FILE_CONTENT } from "../constants";
+import { ContactPage } from "./ContactPage";
 
 interface EditorContentProps {
   activeFile?: FileNode;
@@ -16,14 +16,17 @@ export const EditorContent: React.FC<EditorContentProps> = ({ activeFile }) => {
     );
   }
 
-  if (activeFile.id === 'contact.html') {
-    return <ContactPage />;
+  if (activeFile.id === "contact.html") {
+    return (
+      <div className="flex-1 overflow-auto">
+        <ContactPage />
+      </div>
+    );
   }
 
-  const content = FILE_CONTENT[activeFile.id] || 'File content not found.';
+  const content = FILE_CONTENT[activeFile.id] || "File content not found.";
 
-
-  if (activeFile.id === 'README.md') {
+  if (activeFile.id === "README.md") {
     return (
       <div className="flex-1 overflow-auto">
         <div
@@ -34,19 +37,26 @@ export const EditorContent: React.FC<EditorContentProps> = ({ activeFile }) => {
     );
   }
 
-  const lines = content.split('\n');
+  const lines = content.split("\n");
 
   return (
     <div className="flex-1 overflow-auto p-4 editor-font text-sm leading-6">
       <table>
         <tbody>
           {lines.map((line, i) => (
-            <tr key={i} className={activeFile.id === 'src/1_experience/experience.py' && i === 10 ? 'bg-[var(--active-line-bg)]' : ''}>
+            <tr
+              key={i}
+              className={
+                activeFile.id === "src/1_experience/experience.py" && i === 10
+                  ? "bg-[var(--active-line-bg)]"
+                  : ""
+              }
+            >
               <td className="text-right text-[var(--line-number-color)] pr-4 select-none w-10">
                 {i + 1}
               </td>
               <td className="whitespace-pre">
-                <code dangerouslySetInnerHTML={{ __html: line || ' ' }}/>
+                <code dangerouslySetInnerHTML={{ __html: line || " " }} />
               </td>
             </tr>
           ))}
