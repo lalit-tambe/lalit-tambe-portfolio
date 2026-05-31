@@ -31,7 +31,7 @@ const IconButton: React.FC<{
 
 export const ActivityBar: React.FC<ActivityBarProps> = ({ activeIcon, onIconClick }) => {
   return (
-    <div className="bg-[#333333] w-12 flex flex-col justify-between items-center py-2">
+    <div className="bg-[#333333] w-12 flex flex-col justify-between items-center py-2 tour-activity-bar">
       <div className="w-full">
         {/* <IconButton id="files" activeId={activeIcon} onClick={onIconClick} label="Explorer">
           <FilesIcon className="w-7 h-7" />

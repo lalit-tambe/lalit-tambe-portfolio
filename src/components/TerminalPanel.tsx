@@ -167,7 +167,7 @@ export const TerminalPanel: React.FC<TerminalPanelProps> = ({ onClose }) => {
           <input
             ref={inputRef}
             type="text"
-            className="flex-1 ml-2 bg-transparent outline-none border-none text-[#cccccc]"
+            className="flex-1 ml-2 bg-transparent outline-none border-none text-[#cccccc] tour-terminal-input"
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={handleKeyDown}

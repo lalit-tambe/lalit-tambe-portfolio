@@ -2,6 +2,7 @@ import React, { useState, useCallback, useMemo, useRef, useEffect } from 'react'
 import { ActivityBar } from './components/ActivityBar';
 import { Sidebar } from './components/Sidebar';
 import { SearchSidebar } from './components/SearchSidebar';
+import { TourWizard } from './components/TourWizard';
 import { EditorArea } from './components/EditorArea';
 import { StatusBar } from './components/StatusBar';
 import { TitleBar } from './components/TitleBar';
@@ -120,8 +121,13 @@ const App: React.FC = () => {
     });
   }, []);
 
+  const openTerminalForTour = useCallback(() => {
+    setIsTerminalOpen(true);
+  }, []);
+
   return (
     <div className="flex flex-col h-screen w-screen text-gray-300 overflow-hidden">
+      <TourWizard onOpenTerminal={openTerminalForTour} />
       <TitleBar />
       <main className="flex flex-1 overflow-hidden">
         <ActivityBar activeIcon={activeIcon} onIconClick={setActiveIcon} />

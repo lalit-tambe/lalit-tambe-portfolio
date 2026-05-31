@@ -31,8 +31,10 @@ export const StatusBar: React.FC<StatusBarProps> = ({ activeFile, onToggleTermin
             <span>main</span>
         </StatusItem>
         <StatusItem onClick={onToggleTerminal}>
-           <i className="codicon codicon-terminal mr-1" />
-           <span>Terminal</span>
+           <div className="tour-terminal-btn flex items-center h-full w-full">
+             <i className="codicon codicon-terminal mr-1" />
+             <span>Terminal</span>
+           </div>
         </StatusItem>
       </div>
       <div className="flex items-center h-full">
