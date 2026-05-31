@@ -17,7 +17,7 @@ export const EditorTabs: React.FC<EditorTabsProps> = ({ openFiles, activeFileId,
   };
   
   return (
-    <div className="bg-[#252526] flex overflow-x-auto flex-shrink-0">
+    <div className="flex bg-[#2d2d2d] overflow-x-auto custom-scrollbar flex-shrink-0 tour-editor-tabs">
       {openFiles.map((file) => {
         const isActive = file.id === activeFileId;
         return (
