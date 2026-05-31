@@ -22,7 +22,7 @@ export const FileTree: React.FC<FileTreeProps> = ({ nodes, level = 0, activeFile
           return (
             <li key={node.id}>
               <div
-                className="flex items-center cursor-pointer hover:bg-white/10 px-2 py-1"
+                className="flex items-center cursor-pointer hover:bg-white/10 px-2 py-1 transition-colors duration-150"
                 style={{ paddingLeft: `${level * 16 + 8}px` }}
                 onClick={() => onFolderToggle(node.id)}
               >
@@ -50,7 +50,7 @@ export const FileTree: React.FC<FileTreeProps> = ({ nodes, level = 0, activeFile
         return (
           <li key={node.id}>
             <div
-              className={`flex items-center cursor-pointer hover:bg-white/10 px-2 py-1 ${isActive ? 'bg-[#37373d]' : ''}`}
+              className={`flex items-center cursor-pointer hover:bg-white/10 px-2 py-1 transition-colors duration-150 ${isActive ? 'bg-[#37373d]' : ''}`}
               style={{ paddingLeft: `${level * 16 + 24}px` }}
               onClick={() => onFileClick(node.id)}
             >

@@ -17,7 +17,7 @@ export const EditorTabs: React.FC<EditorTabsProps> = ({ openFiles, activeFileId,
   };
   
   return (
-    <div className="bg-[#252526] flex overflow-x-auto">
+    <div className="bg-[#252526] flex overflow-x-auto flex-shrink-0">
       {openFiles.map((file) => {
         const isActive = file.id === activeFileId;
         return (

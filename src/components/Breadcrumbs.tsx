@@ -14,7 +14,7 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ activeFile }) => {
   const pathSegments = activeFile.id.split('/');
 
   return (
-    <div className="bg-[var(--editor-bg)] text-sm text-gray-400 flex items-center px-4 h-6">
+    <div className="bg-[var(--editor-bg)] text-sm text-gray-400 flex items-center px-4 h-6 flex-shrink-0">
       {pathSegments.map((segment, index) => (
         <React.Fragment key={segment}>
           <span className={index === pathSegments.length - 1 ? 'text-gray-200' : ''}>

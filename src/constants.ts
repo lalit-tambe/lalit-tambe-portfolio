@@ -41,7 +41,7 @@ export const FILE_TREE: FileNode[] = [
 ];
 
 export const FILE_CONTENT: Record<string, string> = {
-   'README.md': `<div class="readme-content-wrapper">
+  'README.md': `<div class="readme-content-wrapper">
    <h2>Lalit Tambe</h2>
 <span class="subtitle">Full Stack Engineer Architecting Scalable SaaS & Data-Intensive Applications</span>
 
@@ -63,92 +63,92 @@ export const FILE_CONTENT: Record<string, string> = {
 
 <p class="call-to-action">This portfolio is an interactive simulation of the VS Code editor. Feel free to explore the files in the side panel to see my work, skills, and experience in more detail. When you're ready to connect, just open the <strong>contact.html</strong> file.</p>`,
   'package.json': `{
-  <span class="token property">"name"</span>: <span class="token string">"lalit-tambe-portfolio"</span>,
-  <span class="token property">"version"</span>: <span class="token string">"1.0.0"</span>,
-  <span class="token property">"description"</span>: <span class="token string">"The professional portfolio of Lalit Tambe."</span>,
-  <span class="token property">"author"</span>: {
-    <span class="token property">"name"</span>: <span class="token string">"Lalit Tambe"</span>,
-    <span class="token property">"email"</span>: <span class="token string">"lalittambe963@gmail.com"</span>
+  "name": "lalit-tambe-portfolio",
+  "version": "1.0.0",
+  "description": "The professional portfolio of Lalit Tambe.",
+  "author": {
+    "name": "Lalit Tambe",
+    "email": "lalittambe963@gmail.com"
   },
-  <span class="token property">"dependencies"</span>: {
-    <span class="token property">"laravel"</span>: <span class="token string">"latest"</span>,
-    <span class="token property">"reactjs"</span>: <span class="token string">"latest"</span>,
-    <span class="token property">"nodejs"</span>: <span class="token string">"latest"</span>,
-    <span class="token property">"django"</span>: <span class="token string">"latest"</span>,
-    <span class="token property">"livewire"</span>: <span class="token string">"latest"</span>,
-    <span class="token property">"python"</span>: <span class="token string">"latest"</span>,
-    <span class="token property">"php"</span>: <span class="token string">"latest"</span>,
-    <span class="token property">"javascript"</span>: <span class="token string">"latest"</span>,
-    <span class="token property">"typescript"</span>: <span class="token string">"latest"</span>
+  "dependencies": {
+    "laravel": "latest",
+    "reactjs": "latest",
+    "nodejs": "latest",
+    "django": "latest",
+    "livewire": "latest",
+    "python": "latest",
+    "php": "latest",
+    "javascript": "latest",
+    "typescript": "latest"
   },
-  <span class="token property">"devDependencies"</span>: {
-    <span class="token property">"git"</span>: <span class="token string">"latest"</span>,
-    <span class="token property">"github-actions"</span>: <span class="token string">"latest"</span>,
-    <span class="token property">"postman"</span>: <span class="token string">"latest"</span>,
-    <span class="token property">"junit"</span>: <span class="token string">"latest"</span>
+  "devDependencies": {
+    "git": "latest",
+    "github-actions": "latest",
+    "postman": "latest",
+    "junit": "latest"
   }
 }`,
-  'src/experience/experience.py': `<span class="token comment"># Full Stack Engineer @ Insnapsys</span>
-<span class="token comment"># May 2021 - Present | Nashik, MH, India</span>
-<span class="token variable">insnapsys_role</span> <span class="token operator">=</span> {
-  <span class="token string">"title"</span>: <span class="token string">"Full Stack Engineer"</span>,
-  <span class="token string">"company"</span>: <span class="token string">"Insnapsys"</span>,
-  <span class="token string">"achievements"</span>: [
-    <span class="token string">"Architected a multi-tenant data sync engine for a Laravel SaaS platform, using a schema-per-tenant model to achieve 100% data isolation and reduce cross-tenant data errors by 95%."</span>,
-    <span class="token string">"Engineered a multi-layered security framework with 2FA, token auth, and a granular RBAC system, resulting in a 40% reduction in identified vulnerabilities."</span>,
-    <span class="token string">"Implemented a versatile ETL pipeline for network data ingestion from REST APIs, DBs, and files, which automated data workflows and decreased data processing time by 60%."</span>,
-    <span class="token string">"Developed a dynamic custom fields module allowing users to extend data models and automatically render UI form elements."</span>,
-    <span class="token string">"Engineered a full-stack, real-time alarm monitoring dashboard with a dynamic, state-aware UI, which decreased the Mean Time to Acknowledgment (MTTA) for critical alerts by 50%."</span>,
-    <span class="token string">"Owned end-to-end development of a bulk data import/export feature using Laravel queues for async processing and WebSockets for real-time progress tracking."</span>,
+  'src/experience/experience.py': `# Full Stack Engineer @ Insnapsys
+# May 2021 - Present | Nashik, MH, India
+insnapsys_role = {
+  "title": "Full Stack Engineer",
+  "company": "Insnapsys",
+  "achievements": [
+    "Architected a multi-tenant data sync engine for a Laravel SaaS platform, using a schema-per-tenant model to achieve 100% data isolation and reduce cross-tenant data errors by 95%.",
+    "Engineered a multi-layered security framework with 2FA, token auth, and a granular RBAC system, resulting in a 40% reduction in identified vulnerabilities.",
+    "Implemented a versatile ETL pipeline for network data ingestion from REST APIs, DBs, and files, which automated data workflows and decreased data processing time by 60%.",
+    "Developed a dynamic custom fields module allowing users to extend data models and automatically render UI form elements.",
+    "Engineered a full-stack, real-time alarm monitoring dashboard with a dynamic, state-aware UI, which decreased the Mean Time to Acknowledgment (MTTA) for critical alerts by 50%.",
+    "Owned end-to-end development of a bulk data import/export feature using Laravel queues for async processing and WebSockets for real-time progress tracking.",
   ]
 }
 
-<span class="token comment"># Frontend Intern @ AxelBuzz</span>
-<span class="token comment"># Dec 2020 - May 2021 | Nashik, MH, India</span>
-<span class="token variable">axelbuzz_role</span> <span class="token operator">=</span> {
-  <span class="token string">"title"</span>: <span class="token string">"Frontend Intern"</span>,
-  <span class="token string">"company"</span>: <span class="token string">"AxelBuzz"</span>,
-  <span class="token string">"achievements"</span>: [
-    <span class="token string">"Spearheaded the design & implementation of a Survey & Quizz web app as a single page application in ReactJs."</span>,
-    <span class="token string">"Implemented Single Sign On & Social authentications including Google Auth, Facebook & LinkedIn."</span>,
-    <span class="token string">"Developed heatmaps for user data, activities, and responses for statistical purposes & improvising survey recommendations."</span>,
+# Frontend Intern @ AxelBuzz
+# Dec 2020 - May 2021 | Nashik, MH, India
+axelbuzz_role = {
+  "title": "Frontend Intern",
+  "company": "AxelBuzz",
+  "achievements": [
+    "Spearheaded the design & implementation of a Survey & Quizz web app as a single page application in ReactJs.",
+    "Implemented Single Sign On & Social authentications including Google Auth, Facebook & LinkedIn.",
+    "Developed heatmaps for user data, activities, and responses for statistical purposes & improvising survey recommendations.",
   ]
 }`,
-  'src/projects/mongo-aggregate.ts': `<span class="token comment">/*
+  'src/projects/mongo-aggregate.ts': `/*
  * NPM Package: mongo-aggregate
  * A fluent, chainable MongoDB aggregation builder.
- * <a href="https://www.npmjs.com/package/mongo-aggregate" target="_blank" style="color: #3794ff; text-decoration: underline;">View on NPM</a>
- */</span>
-<span class="token keyword">import</span> { <span class="token class-name">Aggregator</span> } <span class="token keyword">from</span> <span class="token string">'mongo-aggregate'</span>;
+ * View on NPM: https://www.npmjs.com/package/mongo-aggregate
+ */
+import { Aggregator } from 'mongo-aggregate';
 
-<span class="token comment">// DESCRIPTION:</span>
-<span class="token comment">// Designed and developed a chainable API in Javascript/TypeScript to abstract </span>
-<span class="token comment">// the complexity of MongoDB aggregation stages ($match, $lookup, $project, etc.) </span>
-<span class="token comment">// into intuitive methods like .where(), .with(), and .select().</span>
+// DESCRIPTION:
+// Designed and developed a chainable API in Javascript/TypeScript to abstract 
+// the complexity of MongoDB aggregation stages ($match, $lookup, $project, etc.) 
+// into intuitive methods like .where(), .with(), and .select().
 
-<span class="token comment">// KEY FEATURES:</span>
-<span class="token comment">// - Fluent, chainable interface</span>
-<span class="token comment">// - Full TypeScript support</span>
-<span class="token comment">// - Simplifies complex aggregation pipelines</span>
-<span class="token comment">// - Comprehensive testing suite using Jest and Supertest</span>
+// KEY FEATURES:
+// - Fluent, chainable interface
+// - Full TypeScript support
+// - Simplifies complex aggregation pipelines
+// - Comprehensive testing suite using Jest and Supertest
 
-<span class="token keyword">const</span> <span class="token variable">pipeline</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token function">Aggregator</span>()
-  .<span class="token function">where</span>({ <span class="token property">status</span>: <span class="token string">'active'</span> })
-  .<span class="token function">with</span>({ <span class="token property">from</span>: <span class="token string">'users'</span>, <span class="token property">localField</span>: <span class="token string">'userId'</span>, <span class="token property">foreignField</span>: <span class="token string">'_id'</span>, <span class="token property">as</span>: <span class="token string">'user'</span> })
-  .<span class="token function">select</span>({ <span class="token property">name</span>: <span class="token number">1</span>, <span class="token property">email</span>: <span class="token string">'$user.email'</span> });`,
+const pipeline = new Aggregator()
+  .where({ status: 'active' })
+  .with({ from: 'users', localField: 'userId', foreignField: '_id', as: 'user' })
+  .select({ name: 1, email: '$user.email' });`,
   'src/skills/backend.json': `{
-  <span class="token property">"languages"</span>: [<span class="token string">"PHP"</span>, <span class="token string">"Python"</span>, <span class="token string">"JavaScript"</span>, <span class="token string">"TypeScript"</span>],
-  <span class="token property">"frameworks"</span>: [<span class="token string">"Laravel"</span>, <span class="token string">"Django"</span>, <span class="token string">"NodeJS"</span>, <span class="token string">"Express.js"</span>, <span class="token string">"CodeIgniter"</span>, <span class="token string">"JUnit"</span>], 
-  <span class="token property">"databases"</span>: [<span class="token string">"SQL"</span>, <span class="token string">"SQL Server"</span>, <span class="token string">"MySQL"</span>, <span class="token string">"MongoDB"</span>, <span class="token string">"PostgreSQL"</span>] 
+  "languages": ["PHP", "Python", "JavaScript", "TypeScript"],
+  "frameworks": ["Laravel", "Django", "NodeJS", "Express.js", "CodeIgniter", "JUnit"], 
+  "databases": ["SQL", "SQL Server", "MySQL", "MongoDB", "PostgreSQL"] 
 }`,
   'src/skills/frontend.json': `{
-  <span class="token property">"languages"</span>: [<span class="token string">"HTML5"</span>, <span class="token string">"CSS"</span>, <span class="token string">"JavaScript"</span>, <span class="token string">"TypeScript"</span>],
-  <span class="token property">"frameworks"</span>: [<span class="token string">"ReactJs"</span>, <span class="token string">"Redux"</span>, <span class="token string">"Livewire"</span>, <span class="token string">"AlpineJS"</span>] 
+  "languages": ["HTML5", "CSS", "JavaScript", "TypeScript"],
+  "frameworks": ["ReactJs", "Redux", "Livewire", "AlpineJS"] 
 }`,
   'src/skills/tools.json': `{
-  <span class="token property">"version_control"</span>: [<span class="token string">"Git"</span>, <span class="token string">"Bitbucket"</span>, <span class="token string">"GitHub"</span>],
-  <span class="token property">"cicd"</span>: [<span class="token string">"Github Actions"</span>],
-  <span class="token property">"api"</span>: [<span class="token string">"Postman"</span>],
-  <span class="token property">"scripting"</span>: [<span class="token string">"Bash"</span>]
-}`,
+  "version_control": ["Git", "Bitbucket", "GitHub"],
+  "cicd": ["Github Actions"],
+  "api": ["Postman"],
+  "scripting": ["Bash"]
+}`
 };

@@ -1,10 +1,12 @@
 import React, { useState, useCallback, useMemo, useRef, useEffect } from 'react';
 import { ActivityBar } from './components/ActivityBar';
 import { Sidebar } from './components/Sidebar';
+import { SearchSidebar } from './components/SearchSidebar';
 import { EditorArea } from './components/EditorArea';
 import { StatusBar } from './components/StatusBar';
 import { TitleBar } from './components/TitleBar';
 import { Resizer } from './components/Resizer';
+import { TerminalPanel } from './components/TerminalPanel';
 import { FILE_TREE } from './constants';
 import { FileNode } from './types';
 
@@ -18,6 +20,9 @@ const App: React.FC = () => {
   const [expandedFolders, setExpandedFolders] = useState<Set<string>>(
     new Set(['src', 'src/1_experience', 'src/2_projects', 'src/3_skills'])
   );
+  
+  const [isTerminalOpen, setIsTerminalOpen] = useState(false);
+  const toggleTerminal = useCallback(() => setIsTerminalOpen(prev => !prev), []);
   
   const [sidebarWidth, setSidebarWidth] = useState(256);
   const resizeData = useRef({
@@ -132,14 +137,26 @@ const App: React.FC = () => {
             <Resizer onMouseDown={handleMouseDown} />
           </>
         )}
-        <EditorArea
-          openFiles={openFiles}
-          activeFile={activeFile}
-          onTabClick={handleTabClick}
-          onTabClose={handleTabClose}
-        />
+        {activeIcon === 'search' && (
+          <>
+            <SearchSidebar
+              style={{ width: `${sidebarWidth}px` }}
+              onFileClick={handleFileClick}
+            />
+            <Resizer onMouseDown={handleMouseDown} />
+          </>
+        )}
+        <div className="flex flex-col flex-1 overflow-hidden">
+          <EditorArea
+            openFiles={openFiles}
+            activeFile={activeFile}
+            onTabClick={handleTabClick}
+            onTabClose={handleTabClose}
+          />
+          {isTerminalOpen && <TerminalPanel onClose={() => setIsTerminalOpen(false)} />}
+        </div>
       </main>
-      <StatusBar activeFile={activeFile} />
+      <StatusBar activeFile={activeFile} onToggleTerminal={toggleTerminal} />
     </div>
   );
 };
